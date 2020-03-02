@@ -126,22 +126,22 @@ public class Desk extends JFrame {
 		
 		JLabel la1 = new JLabel("");
 		la1.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uAC8C\uC784.jpg"));
-		la1.setBounds(35, 253, 220, 176);
+		la1.setBounds(35, 374, 220, 176);
 		panel_1.add(la1);
 		
 		JLabel la2 = new JLabel("");
 		la2.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uBA54\uC2E0\uC800.png"));
-		la2.setBounds(279, 253, 220, 176);
+		la2.setBounds(279, 374, 220, 176);
 		panel_1.add(la2);
 		
 		JLabel la3 = new JLabel("");
 		la3.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uBB38\uC11C.jpg"));
-		la3.setBounds(529, 253, 220, 176);
+		la3.setBounds(529, 374, 220, 176);
 		panel_1.add(la3);
 		
 		JLabel la4 = new JLabel("");
 		la4.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uC778\uD130\uB137.png"));
-		la4.setBounds(797, 253, 220, 176);
+		la4.setBounds(797, 374, 220, 176);
 		panel_1.add(la4);
 		
 		JLabel lblNewLabel_1 = new JLabel("\uAC8C\uC784");
@@ -149,7 +149,7 @@ public class Desk extends JFrame {
 		lblNewLabel_1.setBackground(Color.WHITE);
 		lblNewLabel_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(59, 443, 162, 47);
+		lblNewLabel_1.setBounds(59, 564, 162, 47);
 		panel_1.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("\uBA54\uC2E0\uC800");
@@ -157,7 +157,7 @@ public class Desk extends JFrame {
 		lblNewLabel_1_1.setForeground(Color.BLACK);
 		lblNewLabel_1_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
 		lblNewLabel_1_1.setBackground(Color.WHITE);
-		lblNewLabel_1_1.setBounds(294, 443, 162, 47);
+		lblNewLabel_1_1.setBounds(294, 564, 162, 47);
 		panel_1.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("\uBB38\uC11C");
@@ -165,7 +165,7 @@ public class Desk extends JFrame {
 		lblNewLabel_1_1_1.setForeground(Color.BLACK);
 		lblNewLabel_1_1_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
 		lblNewLabel_1_1_1.setBackground(Color.WHITE);
-		lblNewLabel_1_1_1.setBounds(552, 443, 162, 47);
+		lblNewLabel_1_1_1.setBounds(552, 564, 162, 47);
 		panel_1.add(lblNewLabel_1_1_1);
 		
 		
@@ -175,7 +175,7 @@ public class Desk extends JFrame {
 		lblNewLabel_1_1_1_1.setForeground(Color.BLACK);
 		lblNewLabel_1_1_1_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
 		lblNewLabel_1_1_1_1.setBackground(Color.WHITE);
-		lblNewLabel_1_1_1_1.setBounds(822, 443, 162, 47);
+		lblNewLabel_1_1_1_1.setBounds(822, 564, 162, 47);
 		panel_1.add(lblNewLabel_1_1_1_1);
 		
 		
