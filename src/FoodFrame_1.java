@@ -116,6 +116,7 @@ public class FoodFrame_1 extends JFrame {
 		 model = new DefaultTableModel(data, headers);
 		
 		JTable table_2 = new JTable(model);
+		table_2.setBackground(Color.WHITE);
 		scrollPane.setViewportView(table_2);
 		
 		table_2.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 18));

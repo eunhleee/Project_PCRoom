@@ -42,6 +42,7 @@ public class Total extends JFrame {
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 475, 474);
       contentPane = new JPanel();
+      contentPane.setBackground(Color.WHITE);
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
       setContentPane(contentPane);
       contentPane.setLayout(null);
@@ -67,7 +68,7 @@ public class Total extends JFrame {
       JLabel totalprice = new JLabel("");
       totalprice.setBackground(Color.WHITE);
       totalprice.setForeground(Color.BLACK);
-      totalprice.setBounds(230, 358, 149, 40);
+      totalprice.setBounds(231, 364, 149, 40);
       contentPane.add(totalprice);
          model.setRowCount(0);
          for (int i = 0; i < data.length; i++) {

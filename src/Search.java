@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextField;
+import java.awt.Color;
+import javax.swing.border.LineBorder;
 
 public class Search extends JFrame {
 
@@ -55,11 +57,14 @@ public class Search extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		panel.setBackground(Color.WHITE);
 		panel.setBounds(0, 0, 384, 461);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JButton btnclose = new JButton("\uB2EB\uAE30");
+		btnclose.setBorder(null);
+		btnclose.setBackground(Color.LIGHT_GRAY);
 		btnclose.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
 		btnclose.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -76,27 +81,34 @@ public class Search extends JFrame {
 		panel.add(lasearch);
 		
 		laname = new JLabel("\uC774\uB984");
+		laname.setHorizontalAlignment(SwingConstants.CENTER);
 		laname.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
-		laname.setBounds(48, 96, 67, 41);
+		laname.setBounds(66, 96, 67, 41);
 		panel.add(laname);
 		
 		labirth = new JLabel("\uC0DD\uB144\uC6D4\uC77C");
+		labirth.setHorizontalAlignment(SwingConstants.CENTER);
 		labirth.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
-		labirth.setBounds(48, 150, 67, 41);
+		labirth.setBounds(66, 150, 67, 41);
 		panel.add(labirth);
 		
 		laphone = new JLabel("\uC804\uD654\uBC88\uD638");
+		laphone.setHorizontalAlignment(SwingConstants.CENTER);
 		laphone.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
-		laphone.setBounds(48, 201, 67, 41);
+		laphone.setBounds(66, 201, 67, 41);
 		panel.add(laphone);
 		
 		btnID = new JButton("\uC544\uC774\uB514 \uCC3E\uAE30");
+		btnID.setBackground(new Color(255, 222, 173));
+		btnID.setBorder(null);
 		
 		btnID.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
 		btnID.setBounds(40, 284, 129, 51);
 		panel.add(btnID);
 		
 		btnPW = new JButton("\uBE44\uBC00\uBC88\uD638 \uCC3E\uAE30");
+		btnPW.setBackground(new Color(255, 222, 173));
+		btnPW.setBorder(null);
 		btnPW.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DB.searchMember(idTxt.getText(),Integer.parseInt(birthTxt.getText()),Integer.parseInt(phoneTxt.getText()),1);				
@@ -109,20 +121,25 @@ public class Search extends JFrame {
 		idTxt = new JTextField();
 		idTxt.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
 		idTxt.setColumns(10);
-		idTxt.setBounds(139, 100, 136, 34);
+		idTxt.setBounds(157, 100, 136, 34);
 		panel.add(idTxt);
 		
 		birthTxt = new JTextField();
 		birthTxt.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
 		birthTxt.setColumns(10);
-		birthTxt.setBounds(139, 154, 136, 34);
+		birthTxt.setBounds(157, 154, 136, 34);
 		panel.add(birthTxt);
 		
 		phoneTxt = new JTextField();
 		phoneTxt.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
 		phoneTxt.setColumns(10);
-		phoneTxt.setBounds(139, 205, 136, 34);
+		phoneTxt.setBounds(157, 205, 136, 34);
 		panel.add(phoneTxt);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBorder(new LineBorder(Color.LIGHT_GRAY));
+		lblNewLabel.setBounds(40, 69, 294, 196);
+		panel.add(lblNewLabel);
 		btnID.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
