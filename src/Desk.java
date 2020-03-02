@@ -125,22 +125,22 @@ public class Desk extends JFrame {
 		panel_1.add(btnorder);
 		
 		JLabel la1 = new JLabel("");
-		la1.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\\uC790\uBC14\uD559\uC2B5 (1)\\\uC790\uBC14\uD559\uC2B5\\Project _1(\uCC44\uD305 \uD3EC\uD568)\\image\\\uAC8C\uC784.jpg"));
+		la1.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uAC8C\uC784.jpg"));
 		la1.setBounds(35, 253, 220, 176);
 		panel_1.add(la1);
 		
 		JLabel la2 = new JLabel("");
-		la2.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\\uC790\uBC14\uD559\uC2B5 (1)\\\uC790\uBC14\uD559\uC2B5\\Project _1(\uCC44\uD305 \uD3EC\uD568)\\image\\\uBA54\uC2E0\uC800.png"));
+		la2.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uBA54\uC2E0\uC800.png"));
 		la2.setBounds(279, 253, 220, 176);
 		panel_1.add(la2);
 		
 		JLabel la3 = new JLabel("");
-		la3.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\\uC790\uBC14\uD559\uC2B5 (1)\\\uC790\uBC14\uD559\uC2B5\\Project _1(\uCC44\uD305 \uD3EC\uD568)\\image\\\uBB38\uC11C.jpg"));
+		la3.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uBB38\uC11C.jpg"));
 		la3.setBounds(529, 253, 220, 176);
 		panel_1.add(la3);
 		
 		JLabel la4 = new JLabel("");
-		la4.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\\uC790\uBC14\uD559\uC2B5 (1)\\\uC790\uBC14\uD559\uC2B5\\Project _1(\uCC44\uD305 \uD3EC\uD568)\\image\\\uC778\uD130\uB137.png"));
+		la4.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\\uC778\uD130\uB137.png"));
 		la4.setBounds(797, 253, 220, 176);
 		panel_1.add(la4);
 		

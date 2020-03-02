@@ -19,6 +19,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 
 public class FoodFrame_1 extends JFrame {
 
@@ -64,11 +65,13 @@ public class FoodFrame_1 extends JFrame {
 		
 		setBounds(100, 100, 1013, 671);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(-117, 433, 1102, 187);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
@@ -85,9 +88,11 @@ public class FoodFrame_1 extends JFrame {
 		panel_1.add(la_total);
 		
 		JButton btn_payment = new JButton("\uACB0\uC81C");
+		btn_payment.setBorder(null);
+		btn_payment.setBackground(Color.ORANGE);
 		
 		btn_payment.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
-		btn_payment.setBounds(899, 99, 191, 45);
+		btn_payment.setBounds(899, 106, 191, 45);
 		panel_1.add(btn_payment);
 		
 		JLabel lblNewLabel = new JLabel("\uC88C\uC11D\uBC88\uD638 : ");
@@ -102,6 +107,7 @@ public class FoodFrame_1 extends JFrame {
 		panel_1.add(txt_seat);
 		txt_seat.setColumns(10);
 		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBackground(Color.WHITE);
 		scrollPane.setBounds(158, 20, 716, 157);
 		panel_1.add(scrollPane);
 		
@@ -149,10 +155,12 @@ public class FoodFrame_1 extends JFrame {
 		});
 		
 		JPanel ricePanel = new JPanel();
+		ricePanel.setBackground(Color.WHITE);
 		ricePanel.setBounds(0, 23, 997, 400);
 		ricePanel.setLayout(null);
 		
 		JButton btn_rice1 = new JButton("\uC74C\uC2DD1");
+		btn_rice1.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_rice1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name="È²ÅÂÄá³ª¹°ÇØÀå±¹¹ä";
@@ -161,14 +169,16 @@ public class FoodFrame_1 extends JFrame {
 			}
 		});
 		btn_rice1.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\rice1.jpg"));
-		btn_rice1.setBounds(0, 0, 218, 160);
+		btn_rice1.setBounds(12, 0, 218, 160);
 		ricePanel.add(btn_rice1);
 		
 		JPanel drinkPanel = new JPanel();
+		drinkPanel.setBackground(Color.WHITE);
 		drinkPanel.setBounds(131, -165, 836, 245);
 		//contentPane.add(drinkPanel);
 		drinkPanel.setLayout(null);
 		JButton btn_drink1 = new JButton("");
+		btn_drink1.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_drink1.setBackground(Color.WHITE);
 		btn_drink1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -182,6 +192,7 @@ public class FoodFrame_1 extends JFrame {
 		drinkPanel.add(btn_drink1);
 		
 		JButton btn_drink2 = new JButton("\uC74C\uB8CC2");
+		btn_drink2.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_drink2.setBackground(Color.WHITE);
 		btn_drink2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -195,6 +206,7 @@ public class FoodFrame_1 extends JFrame {
 		drinkPanel.add(btn_drink2);
 		
 		JButton btn_drink3 = new JButton("\uC74C\uB8CC3");
+		btn_drink3.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_drink3.setBackground(Color.WHITE);
 		btn_drink3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -209,11 +221,13 @@ public class FoodFrame_1 extends JFrame {
 		
 	
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBackground(Color.WHITE);
 		tabbedPane.setBounds(12, 10, 973, 413);
 		contentPane.add(tabbedPane);
 		tabbedPane.add(ricePanel,"¹äÁ¾·ù");
 		
 		JButton btn_rice2 = new JButton("\uC74C\uC2DD1");
+		btn_rice2.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_rice2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name="ÁøÇÑ¼è°í±â¹Ì¿ª±¹¹ä";
@@ -222,10 +236,11 @@ public class FoodFrame_1 extends JFrame {
 			}
 		});
 		btn_rice2.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project _1\\image\\rice6.jpg"));
-		btn_rice2.setBounds(248, 0, 218, 160);
+		btn_rice2.setBounds(260, 0, 218, 160);
 		ricePanel.add(btn_rice2);
 		
 		JButton btn_rice3 = new JButton("\uC74C\uC2DD1");
+		btn_rice3.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_rice3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name="°ïµå·¹³ª¹°º¸¸®¹ä";
@@ -238,6 +253,7 @@ public class FoodFrame_1 extends JFrame {
 		ricePanel.add(btn_rice3);
 		
 		JButton btn_rice4 = new JButton("\uC74C\uC2DD1");
+		btn_rice4.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_rice4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name="¼­¿ï½Ä¼³··ÅÁ±¹¹ä";
@@ -250,6 +266,7 @@ public class FoodFrame_1 extends JFrame {
 		ricePanel.add(btn_rice4);
 		
 		JButton btn_rice5 = new JButton("\uC74C\uC2DD1");
+		btn_rice5.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_rice5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name="¹öÅÍÀåÁ¶¸²µ¤¹ä";
@@ -258,10 +275,11 @@ public class FoodFrame_1 extends JFrame {
 			}
 		});
 		btn_rice5.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project\\image\\rice5.jpg"));
-		btn_rice5.setBounds(0, 195, 218, 160);
+		btn_rice5.setBounds(12, 195, 218, 160);
 		ricePanel.add(btn_rice5);
 		
 		JButton btn_rice6 = new JButton("\uC74C\uC2DD1");
+		btn_rice6.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_rice6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name="Æò¾ç½Ä¿Â¹Ý";
@@ -270,7 +288,7 @@ public class FoodFrame_1 extends JFrame {
 			}
 		});
 		btn_rice6.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project\\image\\rice2.jpg"));
-		btn_rice6.setBounds(248, 195, 218, 160);
+		btn_rice6.setBounds(260, 195, 218, 160);
 		ricePanel.add(btn_rice6);
 		
 		JLabel la_rice1 = new JLabel("4000\uC6D0");
@@ -278,6 +296,7 @@ public class FoodFrame_1 extends JFrame {
 		ricePanel.add(la_rice1);
 		
 		JButton btn_rice7 = new JButton("\uC74C\uC2DD1");
+		btn_rice7.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		btn_rice7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name="ÂÌ±êÇÑÁÖ²Ù¹Ìµ¤¹ä";
@@ -286,7 +305,7 @@ public class FoodFrame_1 extends JFrame {
 			}
 		});
 		btn_rice7.setIcon(new ImageIcon("C:\\\uC790\uBC14\uD559\uC2B5\\Project\\image\\rice7.jpg"));
-		btn_rice7.setBounds(499, 195, 218, 160);
+		btn_rice7.setBounds(511, 195, 218, 160);
 		ricePanel.add(btn_rice7);
 		
 		JLabel la_rice2 = new JLabel("4000\uC6D0");
