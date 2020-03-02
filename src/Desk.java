@@ -27,7 +27,7 @@ public class Desk extends JFrame {
 	private JPanel contentPane;
 	public static int time_price;
 	
-	
+	//¡÷ºÆ
 	
 	/**
 	 * Launch the application.
