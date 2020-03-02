@@ -8,6 +8,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -18,6 +19,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JLabel;
 
 public class Manager {
 
@@ -28,7 +30,9 @@ public class Manager {
    private int row;
   private JScrollPane scrollPane = new JScrollPane();
   static JButton order;
-  
+  private JTextField Maid;
+  private JTextField MaPass;
+   private Thread th;
    /**
     * Launch the application.
     */
@@ -59,8 +63,8 @@ public class Manager {
 
       initialize();
       AddTable add=new AddTable(table,scrollPane);
-      Thread th=new Thread(add);
-      th.start();
+       th=new Thread(add);
+
     
        
    }
@@ -79,18 +83,28 @@ public class Manager {
       
       //scrollPane.add(table);
       //Mainframe.add(scrollPane);
-
+      JPanel panel = new JPanel();
+      panel.setBackground(Color.white);
+      panel.setBounds(0, 0, 1200, 500);
+      
+      JLabel label=new JLabel();
+      label.setBounds(0, 0, 1200, 500);
+      label.setIcon(new ImageIcon("C:\\자바학습\\Project _1\\image\\dd.jpg"));
+      panel.add(label);
+      Mainframe.getContentPane().add(panel);
       JPanel MSeatPanel = new JPanel();
       MSeatPanel.setBounds(0, 30, 1186, 461);
       MSeatPanel.setBackground(Color.WHITE);
       Mainframe.getContentPane().add(MSeatPanel);
       MSeatPanel.setLayout(new GridLayout(4, 4, 30, 30));
-
+      MSeatPanel.setVisible(false);
       JButton seat1 = new JButton("1");
       seat1.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent arg0) {
             DB.payment(1);
-          DB.deleteLogin(1);
+          
+
+       DB.deleteLogin(1);
           DB.updateStateToSeat(1);
             if (seat1.getBackground() == Color.GRAY)
                seat1.setBackground(Color.PINK);
@@ -325,6 +339,35 @@ public class Manager {
       seat16.setBorder(new LineBorder(SystemColor.controlHighlight));
       seat16.setBackground(Color.PINK);
       MSeatPanel.add(seat16);
+      //scrollPane.setViewportView(table);
+      
+      JPanel MLoginPanel = new JPanel();
+      MLoginPanel.setBounds(0, 530, 1186, 208);
+      MLoginPanel.setBackground(new Color(245, 245, 245));
+      Mainframe.getContentPane().add(MLoginPanel);
+      MLoginPanel.setLayout(null);
+      JButton log = new JButton("\uB85C\uADF8\uC778");
+     
+      log.setBounds(907, 64, 97, 64);
+      MLoginPanel.add(log);
+      
+      Maid = new JTextField();
+      Maid.setBounds(725, 65, 116, 21);
+      MLoginPanel.add(Maid);
+      Maid.setColumns(10);
+      
+      MaPass = new JTextField();
+      MaPass.setColumns(10);
+      MaPass.setBounds(725, 107, 116, 21);
+      MLoginPanel.add(MaPass);
+      
+      JLabel laId = new JLabel("\uC544\uC774\uB514");
+      laId.setBounds(656, 68, 57, 15);
+      MLoginPanel.add(laId);
+      
+      JLabel lapass = new JLabel("\uBE44\uBC00\uBC88\uD638");
+      lapass.setBounds(656, 110, 57, 15);
+      MLoginPanel.add(lapass);
 
       JPanel ManagerPanel = new JPanel();
       ManagerPanel.setBounds(0, 530, 1186, 208);
@@ -333,32 +376,59 @@ public class Manager {
       ManagerPanel.setLayout(null);
 
       order = new JButton("\uC8FC\uBB38\uC644\uB8CC");
-
       order.setBounds(996, 78, 122, 42);
       order.setBackground(new Color(176, 224, 230));
 
       ManagerPanel.add(order);
 
       JButton total = new JButton("\uB9E4\uCD9C\uD604\uD669");
+      total.setBounds(996, 140, 122, 42);
       total.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             Total.main(null);
          }
       });
-      total.setBounds(996, 140, 122, 42);
       total.setBackground(new Color(176, 196, 222));
       ManagerPanel.add(total);
-
-    
       scrollPane.setBounds(14, 12, 854, 184);
       ManagerPanel.add(scrollPane);
+      ManagerPanel.setVisible(false);
+      log.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent arg0) {
+              DB.mlogin(Maid.getText(), MaPass.getText());
+              if(DB.ma)
+              {
+                  MLoginPanel.setVisible(false);
+                  ManagerPanel.setVisible(true);
+                  MSeatPanel.setVisible(true);
+                  panel.setVisible(false);
+                  th.start();
+
+
+              }
+
+           }
+        });
      
-    
-      JPanel MLoginPanel = new JPanel();
-      MLoginPanel.setBounds(0, 530, 1186, 208);
-      MLoginPanel.setLayout(null);
-      MLoginPanel.setBackground(new Color(245, 245, 245));
-      Mainframe.getContentPane().add(MLoginPanel);
+     /* 
+      String[][] data = DB.getOrder();
+      String[] headers = new String[] { "주문번호", "좌석번호", "상품명", "수량", "가격", "완료여부" };
+      DefaultTableModel model = new DefaultTableModel(data, headers);
+      table = new JTable(model);
+       model.setRowCount(0);
+      
+       
+       for (int i = 0; i < data.length; i++) {
+         model.addRow(data[i]);
+         System.out.println(data[i][0].toString());
+      }
+     
+      */
+
+      /*
+       * new Object[][] { DB.getOrder(); }, new String[] { "좌석번호", "상품명", "갯수", "완료여부"
+       * } ));
+       */
 
       ArrayList<String> a = DB.getCustomers();// 버튼색상바꾸는거 생성
       for (int i = 0; i < a.size(); i++)// 버튼색상바꾸기
@@ -418,7 +488,6 @@ public class Manager {
 
 
    }
-
 }
 
 

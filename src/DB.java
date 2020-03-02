@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 
 public class DB {
 	static boolean result;
+	public static boolean ma;
    public static void main(String[] args) {
       // TODO Auto-generated method stub
       getConnection();
@@ -281,25 +282,28 @@ public class DB {
 	      }
 	   }
    public static void mlogin(String mid, String mpass) {        //로그인(id/pass 조회)
-      try {
-         Connection conn = getConnection(); //DB연결 conn객체 
-         PreparedStatement statement = conn.prepareStatement(
-               "SELECT * FROM manger WHERE mid=? AND mpass=?");
-         statement.setString(1, mid);
-         statement.setString(2, mpass);
-         ResultSet results = statement.executeQuery();
-         if(results.next()) { 
-            JOptionPane.showMessageDialog(null, "로그인 성공!");
-         } else {
-            JOptionPane.showMessageDialog(null, "아이디나 패스워드가 틀립니다");
-         }
-   
-      } catch (Exception e) {
-         e.printStackTrace();
-      }
-      
-         
-   }
+	      try {
+	         Connection conn = getConnection(); //DB연결 conn객체 
+	         PreparedStatement statement = conn.prepareStatement(
+	               "SELECT * FROM manager WHERE mid=? AND mpass=?");
+	         statement.setString(1, mid);
+	         statement.setString(2, mpass);
+	         ResultSet results = statement.executeQuery();
+	        
+			if(results.next()) { 
+	            JOptionPane.showMessageDialog(null, "로그인 성공!");
+	            ma=true;
+	         } else {
+	            JOptionPane.showMessageDialog(null, "아이디나 패스워드가 틀립니다");
+	            ma=false;
+	         }
+	   
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      }
+	      
+	         
+	   }
    public static ArrayList<String> getCustomers(){
       try{
          Connection con = getConnection();
