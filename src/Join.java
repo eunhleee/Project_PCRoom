@@ -141,44 +141,7 @@ public class Join extends JFrame {
 		address.setFont(new Font("맑은 고딕", Font.PLAIN, 15));
 		address.setBounds(144, 325, 186, 51);
 		panel.add(address);
-		JButton btnNewButton = new JButton("\uD68C\uC6D0\uAC00\uC785");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String nameTxt = name.getText();
-				String idTxt = id.getText();
-				String passTxt = pass.getText();
-				String addressTxt = address.getText();
-				if(nameTxt.equals("")) {
-					JOptionPane.showMessageDialog(null, "이름을 입력하여 주십시오.");
-					return;
-				} if(idTxt.equals("")) {
-					JOptionPane.showMessageDialog(null, "아이디를 입력하여 주십시오.");
-					return;
-				} if(passTxt.equals("")) {
-					JOptionPane.showMessageDialog(null, "비밀번호를 입력하여 주십시오..");
-					return;
-				} if(birth.getText().equals("")) {
-					JOptionPane.showMessageDialog(null, "생년월일을 입력하여 주십시오..");
-					return;
-				} if(phone.getText().equals("")) {
-					JOptionPane.showMessageDialog(null, "전화번호를 입력하여 주십시오..");
-					return;
-				} if(addressTxt.equals("")) {
-					JOptionPane.showMessageDialog(null, "주소를 입력하여 주십시오.");
-					return;
-				}
-				JOptionPane.showMessageDialog(null, "회원가입을 축하합니다!");
-				dispose();
-				int birthTxt =Integer.parseInt(birth.getText());
-				int phoneTxt = Integer.parseInt(phone.getText());
-				try {
-				DB.insertMember(idTxt,nameTxt,passTxt,birthTxt,phoneTxt,addressTxt);
-				dispose();
-				}catch(NumberFormatException e1) {
-					 JOptionPane.showMessageDialog(null, "숫자만 입력하세요!");
-				}
-			}
-		});
+		
 //		JScrollPane scrollpane = new JScrollPane(address,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 //		address.add(scrollpane);
 		
