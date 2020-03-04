@@ -197,7 +197,7 @@ public class DB {
 		try {
 			Connection conn = getConnection(); // DB¿¬°á conn°´Ã¼
 			PreparedStatement insert = conn.prepareStatement("INSERT INTO member (Mid,name,pass,birth,phone,address)"
-					+ "SELECT '" + id + "','" + name + "','" + pass + "'," + birth + "," + phone + ",'" + address
+					+ "SELECT ('" + id + "','" + name + "','" + pass + "'," + birth + "," + phone + ",'" + address
 					+ "' FROM DUAL" + " WHERE NOT EXISTS (SELECT * FROM member WHERE Mid='" + id + "'and phone=" + phone
 					+ ");");
 
